@@ -5,26 +5,31 @@ class Button extends React.Component {
         super()
         this.handleClick = this.handleClick.bind(this)
         this.state = {
-            disab: false
+            disab: false,
+            backgroundColor: 'white',
+            color: 'black',
         }
     }
     handleClick() {
         if (contador === 0) {
             console.log('clicou');
             this.setState((anterior, _props) => ({
-                disab: anterior.disab = true
+                disab: anterior.disab = true, 
+                color: 'blue',               
             }))
         }
         if (contador === 1) {
             console.log('no');
             this.setState((anterior, _props) => ({
-                disab: anterior.disab = true
+                disab: anterior.disab = true,
+                backgroundColor: anterior.backgroundColor = 'green',                
             }))
         }
         if (contador === 2) {
             console.log('Botão');
             this.setState((anterior, _props) => ({
-                disab: anterior.disab = true
+                disab: anterior.disab = true,
+                color: 'blue',
             }))
         }
         contador += 1
@@ -34,7 +39,7 @@ class Button extends React.Component {
     }
     render() {
         return (
-            <button disabled={this.state.disab} onClick={this.handleClick}>{this.props.title}</button>
+            <button disabled={this.state.disab} style={{color: this.state.color, backgroundColor: this.state.backgroundColor }} onClick={this.handleClick}>{this.props.title}</button>
         )
     }
 }
