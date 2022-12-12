@@ -41,8 +41,11 @@ export default class Carro extends React.Component {
 
     componentDidUpdate() {
         console.log('componentDidUpdate   o carro foi Atualizado !');
-
     }
+
+    shouldComponentUpdate(nextProps, nextState) {
+            return nextState.velAtual >= 0;
+      }
 
     componentWillUnmount() {
         console.log('componentWillUnmount  o carro foi Removido !');
