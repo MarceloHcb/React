@@ -137,3 +137,12 @@ table tbody tr:nth-child(even) {
 .container.dark table tbody tr:nth-child(even) {
   background-color: #444;
 }
+
+button {
+  padding: 10px;  
+  margin-bottom: 10px;
+  color :#0d80bf;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
