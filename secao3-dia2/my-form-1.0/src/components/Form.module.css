@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    gap: 30px;
+}
+
+.result {
+    background-image: radial-gradient(blue 10%, yellow 20%, green 60%);    
+    height: fit-content;
+    color: white;
+    border-radius: 2px;
+}
